@@ -20,7 +20,7 @@ def draw_cat_plot():
     df_cat =  pd.melt(df,id_vars = ["cardio"] , value_vars = ['cholesterol', 'gluc', 'smoke', 'alco', 'active', 'overweight'])
 
 
-    # Group and reformat the data to split it by 'cardio'. Show the counts of each feature. You will have to rename one of the columns for the catplot to work correctly.
+    # Group and reformat the data to split it by 'cardio'. Show the counts of each feature and rename one of the columns for the catplot to work correctly.
     
     # Draw the catplot with 'sns.catplot()'
     
@@ -33,7 +33,7 @@ def draw_cat_plot():
     fig = figure
 
 
-    # Do not modify the next two lines
+    # Save figure and declare as return value for the function.
     fig.savefig('catplot.png')
     return fig
 
@@ -66,6 +66,7 @@ def draw_heat_map():
     sns.heatmap(corr , annot = True , mask =mask)
 
 
-    # Do not modify the next two lines
+    # Save figure and declare as return value for the function.
+
     fig.savefig('heatmap.png')
     return fig
